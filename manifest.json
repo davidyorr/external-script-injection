@@ -1,0 +1,13 @@
+{
+  "name": "jQuery loading fails",
+  "description": "The script will fail to load jQuery.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [ "script.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version": 2
+}
