@@ -10,7 +10,6 @@ var initiallyLoaded = false;
 iframe.onload = function() {
   if (!initiallyLoaded){
     injectExternalScript(setHtml);
-    setHtml();
   }
 };
 document.body.insertBefore(iframe, null);
