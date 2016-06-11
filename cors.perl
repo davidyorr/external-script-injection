@@ -8,7 +8,6 @@ use POSIX ":sys_wait_h";
 use Time::HiRes qw( sleep );
 use Archive::Zip qw( :ERROR_CODES );
 
-my @children;
 my $matches = 0;
 my $CURL_LIMIT = 300;
 
@@ -26,7 +25,6 @@ while ( my $line = <$file> ) {
 	print ".";
 	sleep (0.1);
 	my $pid = fork();
-	push @children, $pid;
 	die "Couldn't fork: $!\n" unless defined !$pid;
 	next if $pid;
 
